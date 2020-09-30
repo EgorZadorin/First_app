@@ -51,11 +51,6 @@ def user_by_id():
     return render_template('user.html', table=result)
 
 
-@app.route('/')
-def index():
-    return render_template('layout.html')
-
-
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
     app.run(port=port)
