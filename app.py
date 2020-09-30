@@ -8,6 +8,7 @@ from view.user_view import build_users_page
 
 from globals import engine, Session
 
+from config import port
 
 app = Flask(__name__)
 CORS(app)
@@ -57,4 +58,4 @@ def index():
 
 if __name__ == "__main__":
     Base.metadata.create_all(engine)
-    app.run(port=4000)
+    app.run(port=port)
